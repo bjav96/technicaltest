@@ -4,7 +4,9 @@
 
 ## Project Overview
 
-This project is a Spring Boot application that provides an API to retrieve the applicable price for a product based on the brand, product ID, and application date. The application uses an in-memory H2 database to store data about brands and prices.
+This project is a Spring Boot application that provides an API to retrieve the applicable price for a product based on
+the brand, product ID, and application date. The application uses an in-memory H2 database to store data about brands
+and prices.
 
 ---
 
@@ -21,8 +23,8 @@ Before running the application, ensure you have the following installed:
 
 1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone https://github.com/bjav96/technicaltest.git
+   git switch develop
    ```
 
 2. **Build the Project**:
@@ -53,6 +55,7 @@ Before running the application, ensure you have the following installed:
 ## API Endpoints
 
 ### 1. **Get Applicable Price**
+
 - **URL**: `/api/v1/getPrice`
 - **Method**: `GET`
 - **Query Parameters**:
@@ -71,10 +74,14 @@ Before running the application, ensure you have the following installed:
 Below are the test cases to verify the functionality of the API:
 
 ### Test 1
+
 - **Request**:
-  ```
-  http://localhost:8081/api/v1/getPrice?applicationDate=2020-06-14%2010%3A00%3A00&productId=35455&brandId=1
-  ```
+-
+
+```bash
+curl "http://localhost:8081/api/v1/getPrice?applicationDate=2020-06-14%2010%3A00%3A00&productId=35455&brandId=1"
+```
+
 - **Expected Response**:
   ```json
   {
@@ -89,9 +96,10 @@ Below are the test cases to verify the functionality of the API:
   ```
 
 ### Test 2
+
 - **Request**:
-  ```
-  http://localhost:8081/api/v1/getPrice?applicationDate=2020-06-14%2016%3A00%3A00&productId=35455&brandId=1
+  ```bash
+  curl "http://localhost:8081/api/v1/getPrice?applicationDate=2020-06-14%2016%3A00%3A00&productId=35455&brandId=1"
   ```
 - **Expected Response**:
   ```json
@@ -107,10 +115,13 @@ Below are the test cases to verify the functionality of the API:
   ```
 
 ### Test 3
+
 - **Request**:
+
+ ```bash
+  curl "http://localhost:8081/api/v1/getPrice?applicationDate=2020-06-14%2021%3A00%3A00&productId=35455&brandId=1"
   ```
-  http://localhost:8081/api/v1/getPrice?applicationDate=2020-06-14%2021%3A00%3A00&productId=35455&brandId=1
-  ```
+
 - **Expected Response**:
   ```json
   {
@@ -125,10 +136,13 @@ Below are the test cases to verify the functionality of the API:
   ```
 
 ### Test 4
+
 - **Request**:
+
+ ```bash
+  curl "http://localhost:8081/api/v1/getPrice?applicationDate=2020-06-15%2010%3A00%3A00&productId=35455&brandId=1"
   ```
-  http://localhost:8081/api/v1/getPrice?applicationDate=2020-06-15%2010%3A00%3A00&productId=35455&brandId=1
-  ```
+
 - **Expected Response**:
   ```json
   {
@@ -143,10 +157,13 @@ Below are the test cases to verify the functionality of the API:
   ```
 
 ### Test 5
+
 - **Request**:
+
+ ```bash
+  curl "http://localhost:8081/api/v1/getPrice?applicationDate=2020-06-16%2021%3A00%3A00&productId=35455&brandId=1"
   ```
-  http://localhost:8081/api/v1/getPrice?applicationDate=2020-06-16%2021%3A00%3A00&productId=35455&brandId=1
-  ```
+
 - **Expected Response**:
   ```json
   {
