@@ -2,8 +2,6 @@ package com.inditex.technicaltest.domain.service;
 
 import com.inditex.technicaltest.domain.model.Price;
 import com.inditex.technicaltest.domain.repository.PriceRepository;
-import com.inditex.technicaltest.domain.service.impl.PriceService;
-import com.inditex.technicaltest.domain.service.PriceServiceImpl;
 import com.inditex.technicaltest.infrastructure.exception.PriceNotFoundException;
 import com.inditex.technicaltest.infrastructure.input.controller.dto.response.PriceResponse;
 import com.inditex.technicaltest.infrastructure.output.mapper.PriceMapper;
