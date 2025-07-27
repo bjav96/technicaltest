@@ -19,6 +19,9 @@ Before running the application, ensure you have the following installed:
 
 ---
 
+The application runs on port **8081**. Ensure this port is available before starting the application.
+
+---
 ## How to Run the Application
 
 1. **Clone the Repository**:
